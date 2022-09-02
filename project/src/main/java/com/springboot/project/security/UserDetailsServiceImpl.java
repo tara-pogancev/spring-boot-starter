@@ -1,6 +1,7 @@
 package com.springboot.project.security;
 
 import com.springboot.project.model.ApplicationUser;
+import com.springboot.project.service.interfaces.ProjectApplicationUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -15,8 +16,8 @@ import java.util.ArrayList;
 @Service
 @RequiredArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
-/*
-    private final ApplicationUserService userService;
+
+    private final ProjectApplicationUserService userService;
 
     @Override
     @Transactional
@@ -28,5 +29,5 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return new User(email, user.getPassword(), new ArrayList<GrantedAuthority>() {
         });
     }
-*/
+
 }
